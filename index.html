@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Afiche · Evaluación Familiar · Carla Romo Salcedo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #D6D3CB;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    font-family: 'Inter', Helvetica, sans-serif;
+    min-height: 100vh;
+  }
+
+  .afiche {
+    width: 540px;
+    height: 810px;
+    background: #FBF7F2;
+    overflow: hidden;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    height: 268px;
+    flex-shrink: 0;
+  }
+  .hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 18%;
+    display: block;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(20,38,54,0)   0%,
+      rgba(20,38,54,0.15) 35%,
+      rgba(20,38,54,0.72) 100%
+    );
+  }
+  .hero-text {
+    position: absolute;
+    bottom: 20px;
+    left: 38px;
+    right: 38px;
+    z-index: 2;
+  }
+  .hook {
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.12;
+    color: #FBF7F2;
+  }
+  .subhero {
+    font-size: 13px;
+    color: rgba(251,247,242,0.82);
+    margin-top: 6px;
+    letter-spacing: 0.01em;
+  }
+
+  /* ── FRANJA ── */
+  .franja {
+    height: 5px;
+    background: #3E8DA1;
+    flex-shrink: 0;
+  }
+
+  /* ── CUERPO ── */
+  .cuerpo {
+    flex: 1;
+    padding: 22px 38px 18px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Servicio principal */
+  .servicio-box {
+    background: #3E8DA1;
+    border-radius: 8px;
+    padding: 13px 16px;
+    margin-bottom: 18px;
+    flex-shrink: 0;
+  }
+  .servicio-box h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    font-size: 21px;
+    color: #FBF7F2;
+    letter-spacing: -0.01em;
+  }
+  .servicio-box p {
+    font-size: 13px;
+    color: rgba(251,247,242,0.88);
+    margin-top: 3px;
+    line-height: 1.4;
+  }
+
+  /* Reconocimiento */
+  .reconocimiento {
+    margin-bottom: 16px;
+    flex-shrink: 0;
+  }
+  .label-intro {
+    font-style: italic;
+    font-size: 12px;
+    color: #8A8784;
+    margin-bottom: 8px;
+  }
+  .pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .pill {
+    font-size: 11.5px;
+    color: #2D3F50;
+    background: rgba(62,141,161,0.08);
+    border: 1px solid rgba(62,141,161,0.22);
+    padding: 3px 9px;
+    border-radius: 20px;
+    line-height: 1.35;
+  }
+
+  /* Divisor coral */
+  .divisor {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #EA8672 25%, #EA8672 75%, transparent);
+    opacity: 0.45;
+    margin: 15px 0;
+    flex-shrink: 0;
+  }
+
+  /* Credenciales + logo */
+  .credenciales {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 15px;
+    flex-shrink: 0;
+  }
+  .credenciales .texto { flex: 1; }
+  .nombre {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    font-size: 17px;
+    color: #1E2D3D;
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+  .credencial {
+    font-size: 11px;
+    color: #8A8784;
+    line-height: 1.65;
+  }
+  .logo-nido {
+    width: 88px;
+    object-fit: contain;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* Otros servicios */
+  .otros {
+    flex: 1;
+  }
+  .otros .label-intro { margin-bottom: 6px; }
+  .otros .item {
+    font-size: 12px;
+    color: #1E2D3D;
+    line-height: 1.75;
+    padding-left: 14px;
+    position: relative;
+  }
+  .otros .item::before {
+    content: '·';
+    position: absolute;
+    left: 2px;
+    color: #EA8672;
+    font-size: 16px;
+    line-height: 1.35;
+  }
+
+  /* CTA */
+  .cta {
+    background: #1E2D3D;
+    border-radius: 8px;
+    padding: 13px;
+    text-align: center;
+    margin-top: 16px;
+    flex-shrink: 0;
+  }
+  .cta .cta-label {
+    font-size: 14.5px;
+    font-weight: 500;
+    color: #FBF7F2;
+    letter-spacing: 0.01em;
+  }
+  .cta .numero {
+    font-size: 12px;
+    color: rgba(251,247,242,0.62);
+    margin-top: 3px;
+  }
+
+  /* Pie */
+  .pie {
+    text-align: center;
+    font-size: 11px;
+    color: #B0ADA8;
+    margin-top: 10px;
+    letter-spacing: 0.025em;
+    flex-shrink: 0;
+  }
+</style>
+</head>
+<body>
+  <div class="afiche">
+
+    <!-- HERO con foto -->
+    <div class="hero">
+      <img src="Imagenes/carla-romo.png" alt="Carla Romo Salcedo">
+      <div class="hero-overlay"></div>
+      <div class="hero-text">
+        <div class="hook">¿Y si no es solo<br>la edad?</div>
+        <div class="subhero">Mirar a tiempo no es exagerar.</div>
+      </div>
+    </div>
+
+    <div class="franja"></div>
+
+    <div class="cuerpo">
+
+      <div class="servicio-box">
+        <h2>Evaluación Familiar</h2>
+        <p>3 sesiones para entender qué pasa y saber cómo seguir.</p>
+      </div>
+
+      <div class="reconocimiento">
+        <div class="label-intro">Si notas en tu hijo/a adolescente:</div>
+        <div class="pills">
+          <span class="pill">aislamiento</span>
+          <span class="pill">tristeza o irritabilidad</span>
+          <span class="pill">ansiedad</span>
+          <span class="pill">conflictos en casa</span>
+          <span class="pill">dificultades sociales</span>
+          <span class="pill">uso problemático de redes</span>
+        </div>
+      </div>
+
+      <div class="divisor"></div>
+
+      <div class="credenciales">
+        <div class="texto">
+          <div class="nombre">Carla Romo Salcedo</div>
+          <div class="credencial">
+            Psicóloga clínica · PUC<br>
+            +25 años acompañando procesos humanos<br>
+            Certificada en Programa PEERS®<br>
+            Creadora del Método NIDO®
+          </div>
+        </div>
+        <img class="logo-nido" src="Imagenes/logo_metodo_nido_transparente.png" alt="Método NIDO">
+      </div>
+
+      <div class="otros">
+        <div class="label-intro">También acompaño:</div>
+        <div class="item">Sesiones individuales para adolescentes</div>
+        <div class="item">Programa NIDO® · habilidades parentales</div>
+        <div class="item">Taller de Habilidades Sociales PEERS®</div>
+      </div>
+
+      <div class="cta">
+        <div class="cta-label">Escríbeme por WhatsApp</div>
+        <div class="numero">+56 9 XXXX XXXX</div>
+      </div>
+
+      <div class="pie">conectarconsentido.com · @conectar_consentido</div>
+
+    </div>
+  </div>
+</body>
+</html>
