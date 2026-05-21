@@ -29,10 +29,10 @@
     flex-direction: column;
   }
 
-  /* ── HERO foto ── */
+  /* ── HERO ── */
   .hero {
     position: relative;
-    height: 330px;
+    height: 312px;
     flex-shrink: 0;
   }
   .hero .foto {
@@ -62,149 +62,179 @@
   }
   .logo-hero {
     position: absolute;
-    top: 18px;
-    right: 20px;
-    width: 82px;
+    top: 16px;
+    right: 18px;
+    width: 78px;
     object-fit: contain;
     z-index: 3;
     filter: drop-shadow(0 2px 6px rgba(0,0,0,0.55)) brightness(1.15);
   }
   .hero-text {
     position: absolute;
-    bottom: 24px;
-    left: 40px;
-    right: 40px;
+    bottom: 20px;
+    left: 38px;
+    right: 38px;
     z-index: 2;
   }
   .hook {
     font-family: 'Fraunces', Georgia, serif;
     font-style: italic;
     font-weight: 400;
-    font-size: 58px;
+    font-size: 54px;
     line-height: 1.07;
     color: #FBF7F2;
   }
   .subhero {
-    font-size: 19px;
+    font-size: 17px;
     color: rgba(251,247,242,0.78);
-    margin-top: 10px;
+    margin-top: 8px;
     letter-spacing: 0.01em;
   }
 
   /* ── CUERPO ── */
   .cuerpo {
     flex: 1;
-    padding: 22px 40px 16px;
+    padding: 16px 38px 14px;
     display: flex;
     flex-direction: column;
   }
 
   .servicio {
-    padding-left: 14px;
+    padding-left: 12px;
     border-left: 3px solid #EA8672;
-    margin-bottom: 10px;
+    margin-bottom: 9px;
     flex-shrink: 0;
   }
   .servicio h2 {
     font-family: 'Fraunces', Georgia, serif;
     font-weight: 500;
-    font-size: 30px;
+    font-size: 27px;
     color: #3E8DA1;
     letter-spacing: -0.01em;
     line-height: 1.15;
   }
   .servicio p {
-    font-size: 17px;
+    font-size: 15px;
     color: #1E2D3D;
-    line-height: 1.4;
-    margin-top: 5px;
+    line-height: 1.38;
+    margin-top: 4px;
   }
 
   .divisor {
     height: 1px;
     background: #EA8672;
     opacity: 0.5;
-    margin: 10px 0;
+    margin: 9px 0;
     flex-shrink: 0;
   }
 
+  /* Reconocimiento */
   .reconocimiento { flex-shrink: 0; }
   .reconocimiento .intro {
     font-family: 'Fraunces', Georgia, serif;
     font-style: italic;
-    font-size: 17px;
+    font-size: 15px;
     color: #3E8DA1;
-    margin-bottom: 7px;
+    margin-bottom: 6px;
   }
   .pills {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px;
   }
   .pill {
     background: rgba(62,141,161,0.10);
     border: 1px solid rgba(62,141,161,0.30);
-    border-radius: 24px;
-    padding: 5px 13px;
-    font-size: 17px;
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 14px;
     color: #1E2D3D;
-    line-height: 1.2;
+    line-height: 1.25;
   }
 
+  /* Credenciales */
   .credenciales {
     flex-shrink: 0;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
-    gap: 12px;
+    gap: 10px;
   }
   .cred-texto { flex: 1; }
   .cred-nombre {
     font-family: 'Fraunces', Georgia, serif;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 18px;
     color: #1E2D3D;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
   }
   .cred-detalle {
-    font-size: 13px;
+    font-size: 12px;
     color: #6A6865;
-    line-height: 1.55;
+    line-height: 1.5;
   }
   .logo-cuerpo {
-    width: 72px;
+    width: 66px;
     object-fit: contain;
     flex-shrink: 0;
-    margin-top: 2px;
   }
 
+  /* Otros servicios */
+  .otros {
+    margin-top: 8px;
+    flex-shrink: 0;
+  }
+  .otros .intro {
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-size: 14px;
+    color: #5F5E5A;
+    margin-bottom: 4px;
+  }
+  .otros .item {
+    font-size: 13px;
+    color: #1E2D3D;
+    line-height: 1.45;
+    padding-left: 12px;
+    position: relative;
+  }
+  .otros .item::before {
+    content: '·';
+    position: absolute;
+    left: 1px;
+    color: #EA8672;
+    font-size: 15px;
+    line-height: 1.15;
+  }
+
+  /* CTA */
   .cta {
     margin-top: auto;
     background: #EA8672;
     border-radius: 8px;
-    padding: 14px;
+    padding: 7px 11px;
     text-align: center;
     box-shadow: 0 4px 16px rgba(234,134,114,0.40);
     flex-shrink: 0;
   }
   .cta .principal {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
     color: #FBF7F2;
     letter-spacing: 0.01em;
   }
   .cta .numero {
-    font-size: 17px;
+    font-size: 16px;
     color: rgba(251,247,242,0.88);
-    margin-top: 3px;
+    margin-top: 2px;
     font-weight: 500;
   }
 
   .pie {
     text-align: center;
-    font-size: 15px;
+    font-size: 13px;
     color: #6A6865;
-    margin-top: 10px;
+    margin-top: 8px;
     letter-spacing: 0.02em;
     flex-shrink: 0;
   }
@@ -255,6 +285,13 @@
           </div>
         </div>
         <img class="logo-cuerpo" src="Imagenes/logo_metodo_nido_transparente.png" alt="Método NIDO">
+      </div>
+
+      <div class="otros">
+        <div class="intro">También acompaño:</div>
+        <div class="item">Sesiones individuales para adolescentes</div>
+        <div class="item">Programa NIDO® · habilidades parentales</div>
+        <div class="item">Taller de Habilidades Sociales para Adolescentes PEERS®</div>
       </div>
 
       <div class="cta">
