@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Afiche · Evaluación Familiar · Carla Romo Salcedo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -11,26 +10,21 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
-    background: #d8d5ce;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 32px;
+    width: 540px;
+    height: 810px;
+    overflow: hidden;
     font-family: 'Inter', Helvetica, sans-serif;
   }
 
   .afiche {
     width: 540px;
     height: 810px;
-    zoom: 2;
     background: #FBF7F2;
     overflow: hidden;
-    box-shadow: 0 4px 28px rgba(0,0,0,0.16);
     display: flex;
     flex-direction: column;
   }
 
-  /* ─── ZONA SUPERIOR navy ─── */
   .zona-top {
     background: #1E2D3D;
     padding: 18px 44px 18px;
@@ -73,7 +67,6 @@
     letter-spacing: 0.01em;
   }
 
-  /* ─── ZONA INFERIOR crema ─── */
   .zona-body {
     flex: 1;
     padding: 12px 44px 10px;
@@ -81,7 +74,6 @@
     flex-direction: column;
   }
 
-  /* Evaluación Familiar con acento coral */
   .servicio {
     padding-left: 14px;
     border-left: 3px solid #EA8672;
@@ -102,7 +94,6 @@
     margin-top: 5px;
   }
 
-  /* Divisor coral más visible */
   .divisor {
     height: 1px;
     background: #EA8672;
@@ -111,10 +102,7 @@
     flex-shrink: 0;
   }
 
-  /* Reconocimiento */
-  .reconocimiento {
-    flex-shrink: 0;
-  }
+  .reconocimiento { flex-shrink: 0; }
   .reconocimiento .intro {
     font-family: 'Fraunces', Georgia, serif;
     font-style: italic;
@@ -141,11 +129,10 @@
     line-height: 1.3;
   }
 
-  /* Autoridad con foto doble anillo */
   .autoridad {
     display: flex;
     align-items: flex-start;
-    gap: 14px;
+    gap: 16px;
     flex-shrink: 0;
   }
   .foto-carla {
@@ -171,11 +158,7 @@
     line-height: 1.55;
   }
 
-  /* Otros servicios */
-  .otros {
-    margin-top: 8px;
-    flex: 1;
-  }
+  .otros { margin-top: 8px; flex: 1; }
   .otros .intro {
     font-family: 'Fraunces', Georgia, serif;
     font-style: italic;
@@ -188,7 +171,7 @@
     font-size: 16px;
     color: #1E2D3D;
     line-height: 1.55;
-    padding-left: 14px;
+    padding-left: 13px;
     position: relative;
   }
   .otros .item::before {
@@ -196,11 +179,10 @@
     position: absolute;
     left: 1px;
     color: #EA8672;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.1;
   }
 
-  /* CTA coral con sombra cálida */
   .cta {
     margin-top: auto;
     background: #EA8672;
@@ -223,7 +205,6 @@
     font-weight: 500;
   }
 
-  /* Pie */
   .secundarios {
     text-align: center;
     font-size: 16px;
@@ -236,8 +217,6 @@
 </head>
 <body>
   <div class="afiche">
-
-    <!-- ZONA SUPERIOR: hook sobre fondo navy -->
     <div class="zona-top">
       <div class="header-row">
         <div class="hook">¿Y si no es solo<br>la edad?</div>
@@ -246,9 +225,7 @@
       <div class="subhero">Mirar a tiempo no es exagerar.</div>
     </div>
 
-    <!-- ZONA INFERIOR: contenido sobre crema -->
     <div class="zona-body">
-
       <div class="servicio">
         <h2>Evaluación Familiar</h2>
         <p>3 sesiones para entender qué pasa<br>y saber cómo seguir.</p>
@@ -297,7 +274,6 @@
       </div>
 
       <div class="secundarios">conectarconsentido.com  ·  @conectar_consentido</div>
-
     </div>
   </div>
 </body>
